@@ -32,15 +32,15 @@ export default class qlsvien extends Component {
             <View style={styles.loginButtonTitle}>
 
             <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Quản Lý Sinh Viên</Text>
+              <Text style={styles.loginButtonTitle} onPress={() => this.props.navigation.navigate('qldssvien')}>Quản Lý Sinh Viên</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Quản Lý Lớp</Text>
+              <Text style={styles.loginButtonTitle} onPress={() => this.props.navigation.navigate('qllop')}>Quản Lý Lớp</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Đăng Xuất</Text>
+              <Text style={styles.loginButtonTitle} onPress={() => this.props.navigation.navigate('Login')}>Đăng Xuất</Text>
             </TouchableOpacity>
           </View>
           </View>

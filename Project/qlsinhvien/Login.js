@@ -6,9 +6,9 @@ import {
   TextInput,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  Keyboard
+  Keyboard, Button
 } from 'react-native'
- import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class Login extends Component {
@@ -30,7 +30,7 @@ export default class Login extends Component {
               color={'rgb(221, 97, 97)'}>
             </Ionicons>
             <Text style={styles.title}>
-              QUẢN LÝ SINH VIÊN
+              Phầm Mền Quản Lý Sinh Viên
           </Text>
           </View>
           <View style={styles.down}>
@@ -52,7 +52,7 @@ export default class Login extends Component {
               </TextInput>
             </View>
             <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Login</Text>
+              <Text style={styles.loginButtonTitle} onPress={() => this.props.navigation.navigate('qlsvien')}>Login</Text>
             </TouchableOpacity>
             <Divider style={styles.divider}></Divider>
           </View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
-    backgroundColor: 'rgb(234, 195, 176)'
+    backgroundColor: "rgba(92, 99,216, 1)"
   },
   up: {
     flex: 3,
@@ -111,12 +111,6 @@ const styles = StyleSheet.create({
   loginButtonTitle: {
     fontSize: 18,
     color: 'white'
-  },
-  facebookButton: {
-    width: 300,
-    height: 45,
-    borderRadius: 6,
-    justifyContent: 'center',
   },
   divider: {
     flexDirection: 'row',

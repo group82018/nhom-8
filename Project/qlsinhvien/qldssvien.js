@@ -12,11 +12,18 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class qldssvien extends Component {
+
+  
   render() {
+    console.disableYellowBox = true;
     const Divider = (props) => {
       return <View {...props}>
         <View style={styles.line}></View>
         <View style={styles.line}></View>
+        <ListView
+        dataSource={this.state.dataSource}
+        renderRow={(rowData) => <Text>{rowData}</Text>}
+      />
       </View>
     }
     return (
@@ -74,16 +81,21 @@ export default class qldssvien extends Component {
                 secureTextEntry={true}
               >
               </TextInput>
+            </View >
+            <View style={{flex: 1, flexDirection: 'row'}}>
+            <TouchableOpacity style={styles.loginButton }>
+              <Text style={styles.loginButtonTitle}>Thêm</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.loginButton}>
+              <Text style={styles.loginButtonTitle}>Xóa</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.loginButton}>
+              <Text style={styles.loginButtonTitle}>Sửa</Text>
+            </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Thêm</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Thêm</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.loginButton}>
-              <Text style={styles.loginButtonTitle}>Thêm</Text>
-            </TouchableOpacity>
+            
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -98,7 +110,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
-    backgroundColor: 'rgb(234, 195, 176)'
+    backgroundColor: "rgba(92, 99,216, 1)"
   },
   up: {
     flex: 3,
@@ -131,20 +143,20 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     width: 100,
-    height: 45,
+    height: 50,
     borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,
     flexDirection: 'row',
-    backgroundColor: 'rgb(221, 97, 97)'
+    backgroundColor: 'rgb(221, 97, 97)',
+    margin: 5
   },
   loginButtonTitle: {
     fontSize: 18,
-    color: 'white'
+    color: 'white',
   },
   divider: {
-   
     height: 40,
     width: 298,
     justifyContent: 'center',
