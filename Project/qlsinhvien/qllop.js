@@ -12,7 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class qllop extends Component {
-
+  static navigationOptions = {
+    header: null // Không sử dụng thanh toolbar giống trong Android
+};
   
   render() {
     console.disableYellowBox = true;

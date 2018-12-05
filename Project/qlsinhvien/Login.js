@@ -12,6 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class Login extends Component {
+  static navigationOptions = {
+    header: null // Không sử dụng thanh toolbar giống trong Android
+};
   render() {
     const Divider = (props) => {
       return <View {...props}>
@@ -19,6 +22,7 @@ export default class Login extends Component {
         <View style={styles.line}></View>
       </View>
     }
+
     return (
       //Donot dismis Keyboard when click outside of TextInput
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
