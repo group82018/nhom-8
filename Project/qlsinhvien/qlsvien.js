@@ -12,6 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class qlsvien extends Component {
+  static navigationOptions = {
+    header: null // Không sử dụng thanh toolbar giống trong Android
+};
   render() {
    
     return (
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'stretch',
-    backgroundColor: 'rgb(234, 195, 176)'
+    backgroundColor: "rgba(92, 99,216, 1)"
   },
   up: {
     flex: 3,

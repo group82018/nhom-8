@@ -12,7 +12,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class qldssvien extends Component {
-
+  static navigationOptions = {
+    header: null // Không sử dụng thanh toolbar giống trong Android
+};
   
   render() {
     console.disableYellowBox = true;
@@ -51,34 +53,38 @@ export default class qldssvien extends Component {
               </TextInput>
             </View>
             <View style={styles.textInputContainer}>
-              <TextInput
+            <TextInput
                 style={styles.textInput}
-                placeholder="Enter your name"
-                secureTextEntry={true}
+                textContentType='IDsinhvien'
+                keyboardType='id-sinhvien'
+                placeholder="Enter your Name"
               >
               </TextInput>
             </View>
             <View style={styles.textInputContainer}>
               <TextInput
                 style={styles.textInput}
-                placeholder="Enter your birthday"
-                secureTextEntry={true}
+                textContentType='IDsinhvien'
+                keyboardType='id-sinhvien'
+                placeholder="Enter your Birthday"
               >
               </TextInput>
             </View>
             <View style={styles.textInputContainer}>
-              <TextInput
+            <TextInput
                 style={styles.textInput}
-                placeholder="Enter your address"
-                secureTextEntry={true}
+                textContentType='IDsinhvien'
+                keyboardType='id-sinhvien'
+                placeholder="Enter your Address"
               >
               </TextInput>
             </View>
             <View style={styles.textInputContainer}>
-              <TextInput
+            <TextInput
                 style={styles.textInput}
-                placeholder="Enter your number phone"
-                secureTextEntry={true}
+                textContentType='IDsinhvien'
+                keyboardType='id-sinhvien'
+                placeholder="Enter your Number Phone"
               >
               </TextInput>
             </View >
